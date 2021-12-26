@@ -1,15 +1,13 @@
 #include "points.h"
 #include <stdlib.h>
 
-static int
-realloc_pts_failed (points_t * pts, int size)
+static int realloc_pts_failed (points_t * pts, int size)
 {
   return realloc (pts->x, size * sizeof *pts->x) == NULL
     || realloc (pts->y, size * sizeof *pts->y) == NULL;
 }
 
-int
-read_pts_failed (FILE * inf, points_t * pts)
+int read_pts_failed (FILE * inf, points_t * pts)
 {
   int size;
   double x, y;
@@ -43,6 +41,5 @@ read_pts_failed (FILE * inf, points_t * pts)
   if (pts->n != size)
     if (realloc_pts_failed (pts, pts->n))
       return 1;
-
-  return 0;
+    return 0;
 }
