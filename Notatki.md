@@ -26,6 +26,5 @@
 
 - http://wikidyd.iem.pw.edu.pl/LMP(2f)10.html
 - http://galaxy.agh.edu.pl/~chwiej/mn/aproksymacja.pdf
-- https://home.agh.edu.pl/~chwiej/mn/interpolacja_2016.pdf
 - https://home.agh.edu.pl/~dpawlus/pliki/matlab/MO_interp_apr.pdf
 - https://pl.wikipedia.org/wiki/Wielomiany_Czebyszewa
