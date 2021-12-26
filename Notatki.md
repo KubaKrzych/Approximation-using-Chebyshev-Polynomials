@@ -20,8 +20,7 @@
 - Maker będzie generował aproksymację na podstawie punktów.
 - prosta.c - aproksymuje wszystkie punkty za pomocą jednej prostej przechodzącej przez pierwszy i ostatni punkt
 - interpolator.c - interpoluje punkty za pomocą wielomianu Lagrange'a
-
-aproksymator_na_bazie.c - aproksymuje punkty przez minimalizację błędu średnio-kwadratowego za pomocą zespołu funkcji bazowych opisanych przed dr. Chwieja (patrz wyżej).
+- aproksymator_na_bazie.c - aproksymuje punkty przez minimalizację błędu średnio-kwadratowego za pomocą zespołu funkcji bazowych opisanych przed dr. Chwieja (patrz wyżej).
 
 ## Materiały
 
