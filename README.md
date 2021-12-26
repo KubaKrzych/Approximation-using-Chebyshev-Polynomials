@@ -2,8 +2,7 @@
 
 Program wyznaczający aproksymację zadanego ciągu danych pomiarowych.
 
-
-Projekt końcowy musi zawierać:
+## Zawartość projektu końcowego
 
 - opis teoretyczny zagadnienia
 - opis wywołania programutesty rozwiązania dla różnych danych wejściowych

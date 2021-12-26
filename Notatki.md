@@ -22,9 +22,23 @@
 - interpolator.c - interpoluje punkty za pomocą wielomianu Lagrange'a
 - aproksymator_na_bazie.c - aproksymuje punkty przez minimalizację błędu średnio-kwadratowego za pomocą zespołu funkcji bazowych opisanych przed dr. Chwieja (patrz wyżej).
 
+## Wielomiany Czebyszewa
+
+ I - [-1, 1]
+
+G(x) = 1/(1-x^2)^(0.5)
+
+Tn(x) = cos(n * arccos(x)), as n = 0,1,2,..,oo
+
+rekurencyjny zapis Tn(x) = 2x * Tn-1(x) - Tn-2(x) = 0.5 * ((x + (x^2 - 1)^0.5)^k + (x - (x^2 - 1)^0.5)^k), gdzie
+
+x = cos(t), k = 0,1,2,...
+
 ## Materiały
 
-- http://wikidyd.iem.pw.edu.pl/LMP(2f)10.html
-- http://galaxy.agh.edu.pl/~chwiej/mn/aproksymacja.pdf
-- https://home.agh.edu.pl/~dpawlus/pliki/matlab/MO_interp_apr.pdf
-- https://pl.wikipedia.org/wiki/Wielomiany_Czebyszewa
+- [Wikidyd - zadanie](http://wikidyd.iem.pw.edu.pl/LMP(2f)10.html)
+- [Aproksymacja - agh](http://galaxy.agh.edu.pl/~chwiej/mn/aproksymacja.pdf)
+- [Interpolacja i aproksymacja - agh](https://home.agh.edu.pl/~dpawlus/pliki/matlab/MO_interp_apr.pdf)
+- [Wielomiany Czebyszewa - wiki](https://pl.wikipedia.org/wiki/Wielomiany_Czebyszewa)
+- [Wielomiany Czebyszewa - Youtube](https://www.youtube.com/watch?v=nkq-zkuxnlY)
+- [Jeszcze nie wiem co to jest, ale jakies zastosowanie tych wielomianow w C wlasnie](https://www.gnu.org/software/gsl/doc/html/cheb.html?highlight=chebyshev)

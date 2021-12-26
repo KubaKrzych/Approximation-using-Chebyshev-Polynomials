@@ -10,11 +10,13 @@
 */
 
 /*
- * Funkcje bazowe: n - liczba funkcji a,b - granice przedzialu aproksymacji i
- * - numer funkcji x - wspolrzedna dla ktorej obliczana jest wartosc funkcji
+ * Funkcje bazowe: 
+ 		n - liczba funkcji 
+		a,b - granice przedzialu aproksymacji 
+		i - numer funkcji 
+		x - wspolrzedna dla ktorej obliczana jest wartosc funkcji
  */
-double
-fi(double a, double b, int n, int i, double x)
+double fi(double a, double b, int n, int i, double x)
 {
 	double		h = (b - a) / (n - 1);
 	double		h3 = h * h * h;
@@ -38,8 +40,7 @@ fi(double a, double b, int n, int i, double x)
 }
 
 /* Pierwsza pochodna fi */
-double
-dfi(double a, double b, int n, int i, double x)
+double dfi(double a, double b, int n, int i, double x)
 {
 	double		h = (b - a) / (n - 1);
 	double		h3 = h * h * h;
@@ -63,8 +64,7 @@ dfi(double a, double b, int n, int i, double x)
 }
 
 /* Druga pochodna fi */
-double
-d2fi(double a, double b, int n, int i, double x)
+double d2fi(double a, double b, int n, int i, double x)
 {
 	double		h = (b - a) / (n - 1);
 	double		h3 = h * h * h;
@@ -88,8 +88,7 @@ d2fi(double a, double b, int n, int i, double x)
 }
 
 /* Trzecia pochodna fi */
-double
-d3fi(double a, double b, int n, int i, double x)
+double d3fi(double a, double b, int n, int i, double x)
 {
 	double		h = (b - a) / (n - 1);
 	double		h3 = h * h * h;
@@ -113,8 +112,7 @@ d3fi(double a, double b, int n, int i, double x)
 }
 
 /* Pomocnicza f. do rysowania bazy */
-double
-xfi(double a, double b, int n, int i, FILE *out)
+double xfi(double a, double b, int n, int i, FILE *out)
 {
 	double		h = (b - a) / (n - 1);
 	double		h3 = h * h * h;
@@ -134,8 +132,7 @@ xfi(double a, double b, int n, int i, FILE *out)
 	fprintf( out, "]\n" );
 }
 
-void
-make_spl(points_t * pts, spline_t * spl)
+void make_spl(points_t * pts, spline_t * spl)
 {
 
 	matrix_t       *eqs= NULL;
