@@ -34,11 +34,22 @@ rekurencyjny zapis Tn(x) = 2x * Tn-1(x) - Tn-2(x) = 0.5 * ((x + (x^2 - 1)^0.5)^k
 
 x = cos(t), k = 0,1,2,...
 
+
+![waga funkcji](https://slidetodoc.com/presentation_image_h/2fbf5634ca6a5cb5cf755254dafe9a21/image-90.jpg)
+
+## Aproksymacja
+
+Polega na wyznaczeniu **m** wspołczynników funkcji F(x), gdzie `F(x) = a0*q0(x) + a1*q1(x) + ... + am*qm(x)`, oraz 
+`||f(x) - F(x)|| = minimum`
+
+qi(x) - funkcje bazowe (m+1) wymiarowej podprzestrzeni liniowej. // Idk o jakie funkcje tu chodzi, chyba o te wielomiany Czebyszewa wlasnie
+
 ## Materiały
 
 - [Wikidyd - zadanie](http://wikidyd.iem.pw.edu.pl/LMP(2f)10.html)
 - [Aproksymacja - agh](http://galaxy.agh.edu.pl/~chwiej/mn/aproksymacja.pdf)
 - [Interpolacja i aproksymacja - agh](https://home.agh.edu.pl/~dpawlus/pliki/matlab/MO_interp_apr.pdf)
+- [Metody numeryczne - agh, bardzo przystępnie wytłumaczone 88 strona](https://home.agh.edu.pl/~zak/downloads/2015-MN3.pdf)
 - [Wielomiany Czebyszewa - wiki](https://pl.wikipedia.org/wiki/Wielomiany_Czebyszewa)
 - [Wielomiany Czebyszewa - Youtube](https://www.youtube.com/watch?v=nkq-zkuxnlY)
 - [Jeszcze nie wiem co to jest, ale jakies zastosowanie tych wielomianow w C wlasnie](https://www.gnu.org/software/gsl/doc/html/cheb.html?highlight=chebyshev)
