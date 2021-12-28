@@ -44,6 +44,8 @@ Polega na wyznaczeniu **m** wspołczynników funkcji F(x), gdzie `F(x) = a0*q0(x
 
 qi(x) - funkcje bazowe (m+1) wymiarowej podprzestrzeni liniowej. // Idk o jakie funkcje tu chodzi, chyba o te wielomiany Czebyszewa wlasnie
 
+Podobnież wagę w(xi) można pomijać, czyli przyjąć "1" dla kązdego x.
+
 ## Pomysły
 
 Można ogarnąć działanie napisanego już aproksymatora na bazie _funkcji sklejanych_ i po prostu pisać na podstawie już napisanego programu swój program, tylko funkcje sklejaną zamieniać na wielomian czebyszewa.
