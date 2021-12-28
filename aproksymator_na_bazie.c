@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <float.h>
+#define DEBUG
 
 /* UWAGA: liczbę używanych f. bazowych można ustawić przez wartość
           zmiennej środowiskowej APPROX_BASE_SIZE
@@ -139,14 +140,15 @@ void make_spl(points_t * pts, spline_t * spl)
 	double         *x = pts->x;
 	double         *y = pts->y;
 	double		a = x[0];
+	printf("%lf\n", a);
 	double		b = x[pts->n - 1];
+	printf("%lf\n", b);
 	int		i, j, k;
 	int		nb = pts->n - 3 > 10 ? 10 : pts->n - 3;
-  char *nbEnv= getenv( "APPROX_BASE_SIZE" );
+  	char *nbEnv= getenv( "APPROX_BASE_SIZE" );
 
 	if( nbEnv != NULL && atoi( nbEnv ) > 0 )
 		nb = atoi( nbEnv );
-
 	eqs = make_matrix(nb, nb + 1);
 
 #ifdef DEBUG
