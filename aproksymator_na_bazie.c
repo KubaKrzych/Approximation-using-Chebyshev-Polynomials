@@ -140,9 +140,7 @@ void make_spl(points_t * pts, spline_t * spl)
 	double         *x = pts->x;
 	double         *y = pts->y;
 	double		a = x[0];
-	printf("%lf\n", a);
 	double		b = x[pts->n - 1];
-	printf("%lf\n", b);
 	int		i, j, k;
 	int		nb = pts->n - 3 > 10 ? 10 : pts->n - 3;
   	char *nbEnv= getenv( "APPROX_BASE_SIZE" );

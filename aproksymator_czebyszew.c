@@ -19,10 +19,18 @@
 		i - numer funkcji 
 		x - wspolrzedna dla ktorej obliczana jest wartosc funkcji
  */
-double fi(int ilosc_funkcji, int stopien){}
+double fi(int x, int stopien){
+	if (stopien == 3)
+		return 4*x^3 - 3*x;
+	if (stopien == 2)
+		return 2*x^2 - 1;
+	if (stopien == 1){}
+}
 
 /* Pierwsza pochodna fi */
-double dfi(int ilosc_funkcji, int stopien){}
+double dfi(int ilosc_funkcji, int stopien){
+	return 
+}
 
 /* Druga pochodna fi */
 double d2fi(int ilosc_funkcji, int stopien){}
