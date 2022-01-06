@@ -59,3 +59,4 @@ Można ogarnąć działanie napisanego już aproksymatora na bazie _funkcji skle
 - [Wielomiany Czebyszewa - wiki](https://pl.wikipedia.org/wiki/Wielomiany_Czebyszewa)
 - [Wielomiany Czebyszewa - Youtube](https://www.youtube.com/watch?v=nkq-zkuxnlY)
 - [Jeszcze nie wiem co to jest, ale jakies zastosowanie tych wielomianow w C wlasnie](https://www.gnu.org/software/gsl/doc/html/cheb.html?highlight=chebyshev)
+- [Druga pochodna Chebyshev str. 14](https://ttu-ir.tdl.org/bitstream/handle/2346/60966/31295008378936.pdf?sequence=1)
