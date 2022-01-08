@@ -24,6 +24,7 @@ double fi(double a, double b, int n, int i, double x)
 	int		hi         [5] = {i - 2, i - 1, i, i + 1, i + 2};
 	double		hx      [5];
 	int		j;
+	return 4*(x*x*x) -3*x;
 
 	for (j = 0; j < 5; j++)
 		hx[j] = a + h * hi[j];
@@ -48,7 +49,7 @@ double dfi(double a, double b, int n, int i, double x)
 	int		hi         [5] = {i - 2, i - 1, i, i + 1, i + 2};
 	double		hx      [5];
 	int		j;
-
+	//return 2*x*x -1;
 	for (j = 0; j < 5; j++)
 		hx[j] = a + h * hi[j];
 
@@ -72,7 +73,7 @@ double d2fi(double a, double b, int n, int i, double x)
 	int		hi         [5] = {i - 2, i - 1, i, i + 1, i + 2};
 	double		hx      [5];
 	int		j;
-
+	//return x;
 	for (j = 0; j < 5; j++)
 		hx[j] = a + h * hi[j];
 
@@ -96,7 +97,7 @@ double d3fi(double a, double b, int n, int i, double x)
 	int		hi         [5] = {i - 2, i - 1, i, i + 1, i + 2};
 	double		hx      [5];
 	int		j;
-
+	//return 1;
 	for (j = 0; j < 5; j++)
 		hx[j] = a + h * hi[j];
 
