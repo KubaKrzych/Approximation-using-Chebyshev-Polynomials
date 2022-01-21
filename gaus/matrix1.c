@@ -6,9 +6,11 @@
 matrix_t *make_matrix (int rn, int cn)
 {
   matrix_t *new_mat = malloc (sizeof *new_mat);
-  if (new_mat == NULL)
+  if (new_mat == NULL){
+    free(new_mat);
     return NULL;
-  if ((new_mat->e = malloc ((size_t) rn * (size_t) cn * sizeof *new_mat->e)) == NULL) {
+  }
+  if ((new_mat->e =malloc ((size_t) rn * (size_t) cn * sizeof *new_mat->e)) == NULL) {
     free (new_mat);
     return NULL;
   }
@@ -44,7 +46,7 @@ double get_entry_matrix (matrix_t * m, int i, int j )
 		return -999;
 }
 
-matrix_t *read_matrix (FILE * in)
+matrix_t * read_matrix (FILE * in)
 {
   int rn, cn;
   int i, j;
@@ -78,19 +80,26 @@ void write_matrix (matrix_t * m, FILE * out)
       fprintf (out, "%8.5f ", m->e[i * m->cn + j]);
     fprintf (out, "%8.5f\n", m->e[i * m->cn + j]);
   }
+  fclose(out);
 }
 
-matrix_t * copy_matrix (matrix_t * s)
+matrix_t *copy_matrix (matrix_t * s)
 {
   matrix_t *d = NULL;
   if (s != NULL)
     d = make_matrix (s->rn, s->cn);
-  if (d != NULL) 
+  if (d != NULL) {
     memcpy (d->e, s->e, s->rn * s->cn * sizeof *s->e);
+    /* int i;
+       for( i= 0; i < s->rn*s->cn; i++ )
+       *(d->e+i)= *(s->e+i);
+     */
+    /* d->rn= s->rn; d->cn= s->cn; done in make_matrix */
+  }
   return d;
 }
 
-matrix_t *transpose_matrix (matrix_t * s)
+matrix_t * transpose_matrix (matrix_t * s)
 {
   matrix_t *d = NULL;
   if (s != NULL)
@@ -105,7 +114,7 @@ matrix_t *transpose_matrix (matrix_t * s)
   return d;
 }
 
-void xchg_rows (matrix_t * m, int i, int j)
+void xchgrows (matrix_t * m, int i, int j)
 {
   if (m != NULL && i >= 0 && i < m->rn && j >= 0 && j < m->rn) {
     int k;
