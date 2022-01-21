@@ -1,10 +1,14 @@
 #include "points.h"
 #include <stdlib.h>
 
+/* Reallocate pts->x and pts->y and free unused memory */
 static int realloc_pts_failed (points_t * pts, int size)
 {
-  return realloc (pts->x, size * sizeof *pts->x) == NULL
-    || realloc (pts->y, size * sizeof *pts->y) == NULL;
+  pts->x = realloc(pts->x, sizeof(*pts->x) * size);
+  pts->y = realloc(pts->y, sizeof(*pts->y) * size);
+  if (pts->y == NULL) free(pts->x);
+  if (pts->x == NULL) free(pts->y);
+  return pts->y == NULL || pts->x == NULL;
 }
 
 int read_pts_failed (FILE * inf, points_t * pts)
@@ -14,11 +18,13 @@ int read_pts_failed (FILE * inf, points_t * pts)
 
   if (pts->n == 0) {
     pts->x = malloc (100 * sizeof *pts->x);
-    if (pts->x == NULL)
+    if (pts->x == NULL){
+      free(pts->y);   // pts->x memory allocation went wrong, so free unused pts->y
       return 1;
+    }
     pts->y = malloc (100 * sizeof *pts->y);
     if (pts->y == NULL) {
-      free (pts->x);
+      free (pts->x);// pts->y memory allocation went wrong, so free unused pts->x
       return 1;
     }
     size = 100;
@@ -41,5 +47,10 @@ int read_pts_failed (FILE * inf, points_t * pts)
   if (pts->n != size)
     if (realloc_pts_failed (pts, pts->n))
       return 1;
-    return 0;
+  return 0;
+}
+
+void free_pts(points_t *points){
+  free(points->x);
+  free(points->y);
 }
