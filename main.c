@@ -153,7 +153,7 @@ main (int argc, char **argv)
 			}
 		}
     dx = (toX - fromX) / (n - 1); // step
-    free_pts(&pts);
+    free_pts(&pts); //free pts struct
     if (gpf == NULL) {
       fprintf (stderr, "%s: can not write gnuplot file: %s\n\n", argv[0], gpt);
       exit (EXIT_FAILURE);
