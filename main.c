@@ -2,6 +2,7 @@
 #include "splines.h"
 #include "makespl.h"
 
+#include <time.h>
 #include <getopt.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,6 +50,7 @@ main (int argc, char **argv)
 
   pts.n = 0;
   spl.n = 0;
+
 
   /* process options, save user choices */
   while ((opt = getopt (argc, argv, "p:s:g:f:t:n:")) != -1) {
