@@ -9,7 +9,7 @@ and optimize it, so there is no data leaking and that it runs quickly.
 
 - /gaus - Gaus method to solve linear equations
 - /test - Data which we will be approximating (dane.&), gen.c is a generator for our data, you can use it as well for your own function (initially fifth degree polynomial)
-- Notatki.md - I've decided to keep it there for all my Polish folks, who would like to see me and my friends notes for the project.
+- Notatki.md - I've decided to keep it there for all my Polish folks, who would like to see me and my colleague's notes for the project.
 - Aproksymator_czebyszew.c - This file contains functions returning Chebyshev polynomials of a specific degree from given argument (x).
 - main.c - main file
 - makespl.&, splines.& - Here we calculate our slope factors for different base functions. (mathematical stuff)
